@@ -1,0 +1,10 @@
+{
+  "prop1": 12,
+  "prop2": "str",
+  "prop3": [
+    {
+      "prop3a": "prop3a value",
+      "prop3b": "prop3b value"
+    }
+  ]
+}
