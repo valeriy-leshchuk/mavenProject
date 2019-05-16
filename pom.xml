@@ -43,6 +43,28 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<file>${project.build.directory}/classes/app.properties</file>
+					<replacements>
+						<replacement>
+							<token>BUILD_TIME</token>
+							<value>${maven.build.timestamp}}</value>
+						</replacement>
+					</replacements>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
